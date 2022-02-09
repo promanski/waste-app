@@ -1,48 +1,53 @@
 const data = [
-    {
-    city:"Kocmyrzów-Luborzyca",
-    village_list: 
-            [
-                {
-                    "name":"Sulechów",
-                    "id":1,
-                    "waste_pickup_dates":{
-                        "bio":["2022-02-09"],
-                        "mixed_waste": ["2022-02-09"],
-                        "segregated": ["2022-02-13"]
-                    }
-                },
-                {
-                    "name":"Głęboka",
-                    "id":2,
-                    "waste_pickup_dates":{
-                        "bio":["2022-02-11","2022-02-12"],
-                        "segregated": ["2022-02-11"]
-                    }
-                },
-                {
-                    "name":"Baranówka",
-                    "id":3,
-                    "waste_pickup_dates":{
-                        "bio":["2022-02-22"],
-                        "segregated": ["2022-02-23"]
-                    }
-                }
-            ]  
-    },
-    {
-        city:"Chrzanów",
-        village_list: 
-                [
-                    {
-                        "name":"Chrzanów",
-                        "waste_pickup_dates":{
-                            "bio":"2022-03-10",
-                            "segregated": "2022-03-13"
-                        }
-                    }
-                ]  
-        }
-]
+  {
+    city: "Kocmyrzów-Luborzyca",
+    village_list: [
+      {
+        name: "Sulechów",
+        id: 1,
+        waste_pickup_dates: {
+          bio: ["2022-01-01", "2022-02-09", "2022-03-21", "2022-04-21"],
+          mixed_waste: ["2022-01-01", "2022-01-09", "2022-03-21", "2022-04-21"],
+          segregated: ["2022-01-14", "2022-03-22", "2022-04-21"],
+          big_size: ["2022-01-15", "2022-03-23", "2022-05-21"],
+        },
+      },
+      {
+        name: "Głęboka",
+        id: 2,
+        waste_pickup_dates: {
+          bio: ["2022-01-01", "2022-02-09", "2022-03-21", "2022-06-21"],
+          mixed_waste: ["2022-01-01", "2022-01-09", "2022-03-21", "2022-05-21"],
+          segregated: ["2022-01-13", "2022-04-21"],
+          big_size: ["2022-02-13", "2022-02-21"],
+        },
+      },
+      {
+        name: "Baranówka",
+        id: 3,
+        waste_pickup_dates: {
+          bio: ["2022-01-01", "2022-02-09", "2022-03-21", "2022-04-21"],
+          mixed_waste: ["2022-01-01", "2022-01-09", "2022-03-21", "2022-04-21"],
+          segregated: ["2022-02-13", "2022-03-21"],
+          big_size: ["2022-02-13", "2022-03-21"],
+        },
+      },
+    ],
+  },
+  {
+    city: "Chrzanów",
+    village_list: [
+      {
+        name: "Chrzanów",
+        waste_pickup_dates: {
+          bio: ["2022-01-01", "2022-02-09", "2022-03-21", "2022-04-21"],
+          mixed_waste: ["2022-01-01", "2022-01-09", "2022-03-21", "2022-04-21"],
+          segregated: ["2022-02-13", "2022-03-21"],
+          big_size: ["2022-02-13", "2022-03-21"],
+        },
+      },
+    ],
+  },
+];
 
 export default data;
