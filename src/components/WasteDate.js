@@ -4,6 +4,20 @@ import 'moment/locale/pl'
 
 const WasteDate = ({data}) => {
 
+    const [currentWastePickupData, setCurrentWastePickupData] = useState();
+    const [previousWastePickupData, setPreviousWastePickupData] = useState();
+    const [futureWastePickupData, setFutureWastePickupData ] = useState();
+
+    const setWastePickupData = (dateArray) =>{
+        let today = moment().startOf('day');
+        let array = [];
+
+        // ["2022-02-11","2022-02-12"]
+        dateArray.map( element =>{
+            array.push(getTimeDiff(element));
+        })
+    }
+
 const getTimeDiff = (date) =>{
     let today = moment().startOf('day');
     let targetDate = moment(date).startOf('day');
@@ -11,12 +25,21 @@ const getTimeDiff = (date) =>{
 }
 
 const daysDiffToText = (number) => {
- switch (number){
-     case 0: return 'dzisiaj'
-     case 1: return 'jutro';
-     case 2: return 'pojutrze'
-     default: return `za ${number} dni`;
- }
+    if (number >=0){
+        switch (number){
+            case 0: return 'dzisiaj'
+            case 1: return 'jutro';
+            case 2: return 'pojutrze'
+            default: return `za ${number} dni`;
+        }
+    }
+    else{
+        switch (number){
+            case -2: return 'przedwczoraj'
+            case -1: return 'wczoraj'
+            default: return `${number} dni temu`;
+        }    
+    }
 }
 
 

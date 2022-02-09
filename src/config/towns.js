@@ -8,6 +8,7 @@ const data = [
                     "id":1,
                     "waste_pickup_dates":{
                         "bio":["2022-02-09"],
+                        "mixed_waste": ["2022-02-09"],
                         "segregated": ["2022-02-13"]
                     }
                 },
@@ -15,7 +16,7 @@ const data = [
                     "name":"Głęboka",
                     "id":2,
                     "waste_pickup_dates":{
-                        "bio":["2022-02-11"],
+                        "bio":["2022-02-11","2022-02-12"],
                         "segregated": ["2022-02-11"]
                     }
                 },
